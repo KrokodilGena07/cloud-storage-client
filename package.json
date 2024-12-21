@@ -1,0 +1,47 @@
+{
+  "name": "cloud-storage-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:dev": "webpack --env mode=development",
+    "build:prod": "webpack --env mode=production",
+    "start": "webpack serve --env mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrokodilGena07/cloud-storage-client.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KrokodilGena07/cloud-storage-client/issues"
+  },
+  "homepage": "https://github.com/KrokodilGena07/cloud-storage-client#readme",
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@types/webpack": "^5.28.5",
+    "@types/webpack-bundle-analyzer": "^4.7.0",
+    "@types/webpack-dev-server": "^4.7.1",
+    "css-loader": "^6.10.0",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2",
+    "webpack": "^5.97.1",
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.0"
+  }
+}
