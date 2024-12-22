@@ -5,6 +5,29 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 export function buildLoaders({mode}: BuildOptions): ModuleOptions['rules'] {
     const isDev = mode === 'development';
 
+    const svgrLoader = {
+        test: /\.svg$/i,
+        loader: '@svgr/webpack',
+        options: {
+            icon: true,
+            svgoConfig: {
+                plugins: [
+                    {
+                        name: 'convertColors',
+                        params: {
+                            currentColor: true
+                        }
+                    }
+                ]
+            }
+        }
+    };
+
+    const assetLoader = {
+        type: 'asset/resource',
+        test: /\.(png|jpg|jpeg|gif)$/i
+    };
+
     const cssLoaderWithModules = {
         loader: 'css-loader',
         options: {
@@ -24,11 +47,16 @@ export function buildLoaders({mode}: BuildOptions): ModuleOptions['rules'] {
 
     const tsLoader = {
         test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/
+        loader: 'ts-loader',
+        exclude: /node_modules/,
+        options: {
+            transpileOnly: true
+        }
     };
 
     return [
+        svgrLoader,
+        assetLoader,
         cssLoader,
         tsLoader
     ];
