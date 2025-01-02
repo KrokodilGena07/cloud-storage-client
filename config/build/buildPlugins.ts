@@ -6,7 +6,7 @@ import {BundleAnalyzerPlugin} from 'webpack-bundle-analyzer';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
-export function buildPlugins({mode, paths, analyzer}: BuildOptions): Configuration['plugins'] {
+export function buildPlugins({mode, paths, analyzer, api}: BuildOptions): Configuration['plugins'] {
     const isDev = mode === 'development';
     const isProd = !isDev;
 
@@ -16,7 +16,7 @@ export function buildPlugins({mode, paths, analyzer}: BuildOptions): Configurati
             favicon: paths.favicon,
         }),
         new DefinePlugin({
-
+            __API__: JSON.stringify(api)
         })
     ];
 

@@ -22,6 +22,7 @@ export default (env: IEnvVariables): Configuration => {
         mode: env.mode ?? 'development',
         port: env.port ?? 3000,
         paths,
-        analyzer: env.analyzer ?? false
+        analyzer: env.analyzer ?? false,
+        api: 'http://localhost:5000/api'
     });
 };

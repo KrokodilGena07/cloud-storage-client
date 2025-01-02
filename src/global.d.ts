@@ -17,3 +17,5 @@ declare module '*.svg' {
     const Svg: React.FC<React.SVGProps<SVGSVGElement>>;
     export default Svg;
 }
+
+declare const __API__: string;

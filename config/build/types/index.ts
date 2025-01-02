@@ -3,6 +3,7 @@ export interface BuildOptions {
     port: number;
     paths: BuildPaths;
     analyzer: boolean;
+    api: string;
 }
 
 export interface BuildPaths {

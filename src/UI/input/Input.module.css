@@ -1,0 +1,76 @@
+.Input {
+    border: none;
+    border-radius: 20px;
+    outline: 1px solid #AAAAAA;
+    background-color: #FFFFFF;
+}
+
+.InputText {
+    font-family: 'Montserrat', serif;
+    font-weight: 500;
+}
+
+.Input:focus,
+.PasswordInputParent:focus-within {
+    outline-width: 2px;
+    outline-color: #000000;
+}
+
+.sm {
+    font-size: small;
+    padding: 8px;
+}
+
+.md {
+    font-size: medium;
+    padding: 12px;
+}
+
+.lg {
+    font-size: large;
+    padding: 14px;
+}
+
+.InputNone {
+    display: none;
+}
+
+.FileInput {
+    cursor: pointer;
+}
+
+.Error {
+    color: #FF0000;
+    font-size: medium;
+    font-weight: 300;
+    text-align: left;
+}
+
+.ErrorInput {
+    outline-color: #FF0000;
+}
+
+.PasswordInput {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.PasswordInputParent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.PasswordInputButton {
+    margin-right: 20px;
+    border: none;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.PasswordInputIcon {
+    width: 30px;
+    height: 30px;
+    display: block;
+}

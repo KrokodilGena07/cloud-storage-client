@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
+import styles from './LazyError';
 
-const App: FC = () => {
+const Error: FC = () => {
     return (
         <div>
 
@@ -8,4 +9,4 @@ const App: FC = () => {
     );
 };
 
-export default App;
+export default Error;

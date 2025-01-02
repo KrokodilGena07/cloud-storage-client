@@ -1,0 +1,52 @@
+.FormWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.Form {
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 30px 50px;
+
+    text-align: center;
+    font-family: 'Lexend Deca', serif;
+    font-weight: 500;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 400px;
+}
+
+.SubmitButton {
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+
+.Input {
+    margin-top: 20px;
+}
+
+.LastInput {
+    margin-bottom: 40px;
+}
+
+.LinkButton {
+    width: 100%;
+}
+
+.Error {
+    color: #FF0000;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 450px) {
+    .Form {
+        width: 100%;
+        box-shadow: none;
+        padding: 30px;
+    }
+}

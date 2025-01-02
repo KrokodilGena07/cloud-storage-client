@@ -1,0 +1,43 @@
+.Button {
+    border: none;
+    border-radius: 20px;
+    font-family: 'Lexend Deca', serif;
+    font-weight: 400;
+}
+
+.Button:hover {
+    cursor: pointer;
+}
+
+.default {
+    background-color: #FFFFFF;
+    outline: 1px solid #AAAAAA;
+}
+
+.default:hover {
+    background-color: #f1f1f1;
+}
+
+.primary {
+    background-color: #1f1f1f;
+    color: #FFFFFF;
+}
+
+.primary:hover {
+    background-color: #000000;
+}
+
+.sm {
+    font-size: small;
+    padding: 8px;
+}
+
+.md {
+    font-size: medium;
+    padding: 10px;
+}
+
+.lg {
+    font-size: large;
+    padding: 12px;
+}
