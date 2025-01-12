@@ -1,0 +1,59 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 30px;
+}
+
+.Logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.Text {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 900;
+    font-size: xx-large;
+    color: #000000;
+}
+
+.Image {
+    width: 64px;
+}
+
+.Input {
+    width: 100%;
+}
+
+.Avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.AvatarLink {
+    text-decoration: none;
+}
+
+@media screen and (width < 1000px) {
+    .Header {
+        padding: 8px;
+        gap: 20px;
+    }
+
+    .Image {
+        width: 48px;
+    }
+
+    .Avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 33px;
+    }
+}

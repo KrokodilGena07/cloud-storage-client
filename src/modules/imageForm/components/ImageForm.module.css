@@ -1,0 +1,59 @@
+.Modal {
+    z-index: 1;
+    padding: 20px;
+    width: 400px;
+}
+
+.ModalWrapper {
+    z-index: 1;
+}
+
+.NewImage {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.Image {
+    width: 125px;
+}
+
+.Avatar {
+    width: 125px;
+    height: 125px;
+    font-size: 100px;
+    font-weight: 700;
+}
+
+.Panel {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 30px;
+}
+
+.Button {
+    border: none;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.Button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.PhotoIcon {
+    width: 75px;
+    height: 75px;
+}
+
+.AvatarImage {
+    width: 75px;
+}
+
+.SaveButton {
+    width: 100%;
+    margin-top: 50px;
+}

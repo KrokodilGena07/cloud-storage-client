@@ -1,0 +1,17 @@
+.Storage {
+    border-top: 2px solid #AAAAAA;
+}
+
+.Sidebar {
+    width: 300px;
+    border-right: 2px solid #AAAAAA;
+    height: calc(100vh - 84px - 2px);
+
+    position: fixed;
+}
+
+@media screen and (width < 1000px) {
+    .Sidebar {
+        height: calc(100vh - 64px - 2px);
+    }
+}

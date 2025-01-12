@@ -1,8 +1,8 @@
 import React, {FC, useState} from 'react';
 import styles from './Input.module.css';
 import {UISize} from '@/models';
-import EyeIcon from '@/assets/eyeIcon.svg';
-import ClosedEyeIcon from '@/assets/closedEyeIcon.svg';
+import EyeIcon from '@/assets/svg/passwordIcons/eyeIcon.svg';
+import ClosedEyeIcon from '@/assets/svg/passwordIcons/closedEyeIcon.svg';
 
 interface IInputProps {
     value?: string;
@@ -15,6 +15,7 @@ interface IInputProps {
     size?: UISize;
     isInvalid?: boolean;
     error?: string;
+    id?: string;
 }
 
 const Input: FC<IInputProps> = props => {
@@ -59,6 +60,7 @@ const Input: FC<IInputProps> = props => {
                         placeholder={props.placeholder}
                         required={props.required}
                         max={props.max}
+                        id={props.id}
                     />
                     <button
                         className={styles.PasswordInputButton}
@@ -90,6 +92,7 @@ const Input: FC<IInputProps> = props => {
                 placeholder={props.placeholder}
                 required={props.required}
                 max={props.max}
+                id={props.id}
             />
             {props.error &&
                 <span className={styles.Error}>{props.error}</span>

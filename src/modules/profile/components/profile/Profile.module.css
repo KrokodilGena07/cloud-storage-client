@@ -1,0 +1,11 @@
+@media screen and (max-width: 600px) {
+    .DeleteAccountModal {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .LogoutModal {
+        padding: 10px;
+    }
+}

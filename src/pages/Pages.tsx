@@ -1,17 +1,19 @@
+import React from 'react';
 import {RouteObject} from 'react-router-dom';
-import LazyError from '@/pages/error/LazyError';
-import LazyStorage from '@/pages/storage/LazyStorage';
+import LazyMain from '@/pages/main/LazyMain';
 import LazyAuth from '@/pages/auth/LazyAuth';
+import LazyUser from '@/pages/user/LazyUser';
 
 export enum Pages {
     AUTH_REGISTRATION = '/registration',
     AUTH_LOGIN = '/login',
-    STORAGE = '/'
+    MAIN = '/',
+    PROFILE = '/profile'
 }
 
 export const privateRoutes: RouteObject[] = [
-    {path: Pages.STORAGE, element: <LazyStorage/>},
-    {path: '*', element: <LazyError/>}
+    {path: Pages.PROFILE, element: <LazyUser/>},
+    {path: '*', element: <LazyMain/>}
 ];
 
 export const publicRoutes: RouteObject[] = [

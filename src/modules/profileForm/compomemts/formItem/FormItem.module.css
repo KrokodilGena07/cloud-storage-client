@@ -1,0 +1,10 @@
+.FormItem {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.Label {
+    font-size: large;
+    font-family: 'Lexend Deca', serif;
+    font-weight: 300;
+}

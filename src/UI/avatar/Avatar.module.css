@@ -1,0 +1,15 @@
+.Image {
+    border-radius: 50%;
+}
+
+.Icon {
+    background-color: #000000;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #FFFFFF;
+    font-family: 'Lexend Deca', sans-serif;
+}

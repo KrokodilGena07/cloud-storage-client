@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import styles from './Button.module.css';
 import {UISize} from '@/models';
 
-interface IButtonProps {
+type ButtonProps = React.ButtonHTMLAttributes<ButtonProps> & {
     children?: React.ReactNode;
     onClick?: () => void;
     variant?: 'primary' | 'default' | 'icon';
@@ -10,7 +10,7 @@ interface IButtonProps {
     className?: string;
 }
 
-const Button: FC<IButtonProps> = props => {
+const Button: FC<ButtonProps> = props => {
     const size = props.size ? styles[props.size] : styles.md;
     const variant = props.variant ? styles[props.variant] : styles.default;
     const classes = `${styles.Button} ${size} ${variant} ${props.className}`;
@@ -19,6 +19,7 @@ const Button: FC<IButtonProps> = props => {
         <button
             onClick={props.onClick}
             className={classes}
+            type={props.type}
         >
             {props.children}
         </button>

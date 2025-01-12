@@ -1,0 +1,23 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Text {
+    font-size: x-large;
+    font-family: 'Lexend Deca', serif;
+    font-weight: 800;
+}
+
+.Button {
+    border: none;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.Icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+}

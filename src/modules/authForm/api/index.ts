@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {IAuthResponse} from '@/models';
-import {IUserInput} from '@/modules/authForm/models';
+import {IUserInput} from '@/modules/authForm/models/IUserInput';
 
 export class AuthApi {
     static async registration(data: IUserInput): Promise<IAuthResponse> {

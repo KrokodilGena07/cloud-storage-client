@@ -12,3 +12,10 @@ export interface IAuthResponse {
 }
 
 export type UISize = 'sm' | 'md' | 'lg';
+
+export enum flagNames {
+    PROFILE = 'profile',
+    IMAGE = 'image',
+    ERROR = 'error',
+    MOBILE = 'mobile'
+}

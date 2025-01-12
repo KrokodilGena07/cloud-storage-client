@@ -1,4 +1,4 @@
-import {IError} from '@/modules/authForm/models';
+import {IError} from '@/modules/authForm/models/IError';
 
 export const getInputError = (errors: IError[]) => {
     return (field: string) => {

@@ -1,0 +1,46 @@
+.ConfirmBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+    padding: 15px;
+    margin: 10px;
+}
+
+.Text {
+    font-size: x-large;
+    font-family: 'Lexend Deca', serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+.danger {
+    color: #FF0000;
+    outline-color: #FF0000 !important;
+}
+
+.danger:hover {
+    color: #FFFFFF;
+    background-color: #FF0000 !important;
+}
+
+.warning {
+    color: #FFC107;
+    outline-color: #FFC107 !important;
+}
+
+.warning:hover {
+    color: #FFFFFF;
+    background-color: #FFC107 !important;
+}
+
+.success {
+    color: #198754;
+    outline-color: #198754 !important;
+}
+
+.success:hover {
+    color: #FFFFFF;
+    background-color: #198754 !important;
+}

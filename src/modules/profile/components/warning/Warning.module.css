@@ -1,0 +1,27 @@
+.Warning {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #FF0000;
+    padding: 5px;
+}
+
+.Text {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: large;
+    color: #FF0000;
+}
+
+.Button {
+    border: none;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.Icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+}

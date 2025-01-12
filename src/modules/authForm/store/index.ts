@@ -1,8 +1,8 @@
 import {create} from 'zustand';
 import {immer} from 'zustand/middleware/immer';
 import {IAuthResponse} from '@/models';
-import {IUserInput} from '@/modules/authForm/models';
 import {AuthApi} from '@/modules/authForm/api';
+import {IUserInput} from '@/modules/authForm/models/IUserInput';
 
 interface IAuthStore {
     isLoading: boolean;

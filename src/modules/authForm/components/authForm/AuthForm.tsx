@@ -6,9 +6,10 @@ import Input from '@/UI/input/Input';
 import {Link, useLocation, useNavigate} from 'react-router-dom';
 import {useAuthStore} from '@/modules/authForm/store';
 import {AxiosError} from 'axios';
-import {IError, IErrorData} from '@/modules/authForm/models';
 import {useUserStore} from '@/store/useUserStore';
 import {getInputError} from '@/modules/authForm/utils/getInputError';
+import {IError} from '@/modules/authForm/models/IError';
+import {IErrorData} from '@/modules/authForm/models/IErrorData';
 
 export const AuthForm: FC = () => {
     const location = useLocation()
@@ -55,7 +56,7 @@ export const AuthForm: FC = () => {
         await authorization({...newUser, image: file})
             .then(data => {
                 setUser(data);
-                navigate(Pages.STORAGE);
+                navigate(Pages.MAIN);
             })
             .catch(err => {
                 const error = (err as AxiosError<IErrorData>).response.data;
@@ -103,7 +104,7 @@ export const AuthForm: FC = () => {
                     onChange={v => newUserHandler(v, 'password')}
                     className={styles.Input}
                     required
-                    max={255}
+                    max={30}
                     placeholder='Password'
                     type='password'
                     isInvalid={!!inputError('password')}
