@@ -1,6 +1,6 @@
-import {IError} from '@/modules/authForm/models/IError';
+import {IError} from '@/models/IError';
 
 export interface IErrorData {
     message: string;
-    errors: IError[];
+    errors?: IError[];
 }

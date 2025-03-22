@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import styles from './UserData.module.css';
 import Avatar from '@/UI/avatar/Avatar';
 import Button from '@/UI/button/Button';
-import {IUser} from '@/models';
+import {IUser} from '@/models/auth';
 
 interface IUserDataProps {
     setEditFlag: (flag: boolean) => void;
@@ -14,7 +14,10 @@ interface IUserDataProps {
 const UserData: FC<IUserDataProps> = props => {
     return (
         <div className={styles.Profile}>
-            <Avatar className={styles.Avatar}/>
+            <Avatar
+                className={styles.Avatar}
+                size={150}
+            />
             <h1 className={styles.Username}>{props.user.username}</h1>
             <span className={styles.Email}>{props.user.email}</span>
             <div className={styles.Buttons}>

@@ -1,6 +1,6 @@
 import {create} from 'zustand';
 import {immer} from 'zustand/middleware/immer';
-import {IAuthResponse} from '@/models';
+import {IAuthResponse} from '@/models/auth';
 import {AuthApi} from '@/api/AuthApi';
 import {AxiosError} from 'axios';
 

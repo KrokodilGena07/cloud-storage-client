@@ -1,0 +1,86 @@
+.CurrentFolder {
+    font-family: 'Lexend Deca', serif;
+}
+
+.Head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.FolderName {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.Menu {
+    display: flex;
+    gap: 15px;
+}
+
+.FileName {
+    font-family: Montserrat, sans-serif;
+}
+
+.Files {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.File {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.Empty {
+    font-family: Montserrat, sans-serif;
+    height: calc(100vh - var(--header-height-d) - 40px - 20px - 10px - var(--border-size));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FolderModal {
+    z-index: 1;
+}
+
+.FolderModalWindow {
+    padding: 20px;
+    font-family: 'Lexend Deca', serif;
+    width: 400px;
+}
+
+.Form {
+    display: flex;
+    flex-direction: column;
+}
+
+.Title {
+    margin-bottom: 20px;
+}
+
+.ButtonBox {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Input {
+    border-radius: 12px;
+}
+
+.Button {
+    margin-top: 20px;
+    justify-self: flex-end;
+    border-radius: 12px !important;
+}
+
+.Err {
+    margin-top: 10px;
+    color: #FF0000;
+    font-weight: 300;
+}

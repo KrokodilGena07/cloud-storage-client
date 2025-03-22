@@ -1,17 +1,17 @@
 .Storage {
+    display: flex;
     border-top: 2px solid #AAAAAA;
+
+    --border-size: 2px;
 }
 
-.Sidebar {
-    width: 300px;
-    border-right: 2px solid #AAAAAA;
-    height: calc(100vh - 84px - 2px);
-
-    position: fixed;
+.Content {
+    border-left: 2px solid #AAAAAA;
+    padding: 10px;
+    flex-grow: 1;
 }
 
-@media screen and (width < 1000px) {
-    .Sidebar {
-        height: calc(100vh - 64px - 2px);
-    }
+.freeze {
+    height: 100vh;
+    overflow-y: hidden;
 }

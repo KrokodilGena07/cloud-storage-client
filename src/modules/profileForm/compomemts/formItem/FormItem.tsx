@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import styles from './FormItem.module.css';
 import Input from '@/UI/input/Input';
-import {IUserInput} from '@/modules/profileForm/models';
+import {IUserInput} from '@/modules/profile/models';
 
 interface IFormItemProps {
     id: string;

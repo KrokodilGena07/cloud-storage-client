@@ -1,5 +1,5 @@
 import {create} from 'zustand';
-import {IAuthResponse, IUser} from '@/models';
+import {IAuthResponse, IUser} from '@/models/auth';
 import {immer} from 'zustand/middleware/immer';
 
 interface IAuthStore {
@@ -10,7 +10,7 @@ interface IAuthStore {
 }
 
 export const useUserStore = create<IAuthStore>()(immer(set => ({
-    accessToken: localStorage.getItem('Token'),
+    accessToken: JSON.parse(localStorage.getItem('Token')),
     user: JSON.parse(localStorage.getItem('User') || 'null'),
     setUser: data => {
         set({

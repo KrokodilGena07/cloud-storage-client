@@ -1,0 +1,73 @@
+.Dropdown {
+    cursor: pointer;
+    width: fit-content;
+    position: relative;
+}
+
+.default {
+    background-color: #AAAAAA;
+}
+
+.primary {
+    background-color: #000000;
+}
+
+.Head {
+    border-radius: 4px;
+    padding: 8px;
+
+    font-family: Montserrat, system-ui;
+    font-weight: 400;
+    color: #FFFFFF;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.Menu {
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    padding: 4px;
+    margin-top: 4px;
+
+    position: absolute;
+    outline: #DDDDDD 1px solid;
+    width: 100%;
+    z-index: 1;
+}
+
+.MenuIcon {
+    font-family: Montserrat, system-ui;
+    font-weight: 400;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.MenuIcon:hover {
+    background-color: #DDDDDD;
+}
+
+.primary_selected {
+    background-color: rgba(0, 0, 0, 0.16);
+    font-weight: 500;
+}
+
+.default_selected {
+    background-color: rgba(170, 170, 170, 0.58);
+    font-weight: 500;
+}
+
+.NoData {
+    font-family: Montserrat, system-ui;
+    font-weight: 500;
+    color: #6c6c6c;
+    padding: 4px 0;
+    text-align: center;
+}

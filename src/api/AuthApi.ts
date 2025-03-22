@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {IAuthResponse} from '@/models';
+import {IAuthResponse} from '@/models/auth';
 
 export class AuthApi {
     static async logout(): Promise<void> {

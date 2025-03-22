@@ -4,9 +4,10 @@ import {useUserStore} from '@/store/useUserStore';
 
 interface IAvatarProps {
     className?: string;
+    size?: number;
 }
 
-const Avatar: FC<IAvatarProps> = ({className}) => {
+const Avatar: FC<IAvatarProps> = ({className, size=50}) => {
     const {user} = useUserStore();
 
     if (user.image) {
@@ -15,12 +16,17 @@ const Avatar: FC<IAvatarProps> = ({className}) => {
                 src={user.image}
                 alt='avatar'
                 className={`${styles.Image} ${className}`}
+                width={size}
+                height={size}
             />
         );
     }
 
     return (
-        <div className={`${styles.Icon} ${className}`}>
+        <div
+            className={`${styles.Icon} ${className}`}
+            style={{width: size, height: size, fontSize: Math.round(size / 1.3)}}
+        >
             {user.username[0]}
         </div>
     );

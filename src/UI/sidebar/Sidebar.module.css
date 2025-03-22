@@ -1,0 +1,55 @@
+.Sidebar {
+    position: sticky;
+    width: 300px;
+    height: calc(100vh - var(--header-height-d) - var(--border-size));
+    top: 0;
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+.Buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Button {
+    border-radius: 12px !important;
+    width: 100%;
+}
+
+.Menu {
+    margin-top: 20px;
+    list-style: none;
+}
+
+.MenuItem {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: large;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.MenuItem:hover {
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+
+.SelectedItem {
+    background-color: #cbcbcb !important;
+}
+
+.Label {
+    position: absolute;
+    width: calc(300px - 20px);
+    height: 40px;
+    cursor: pointer;
+}
+
+@media screen and (width < 1000px) {
+    .Sidebar {
+        height: calc(100vh - var(--header-height-m) - var(--border-size));
+    }
+}

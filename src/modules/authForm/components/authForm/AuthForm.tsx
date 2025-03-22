@@ -7,9 +7,10 @@ import {Link, useLocation, useNavigate} from 'react-router-dom';
 import {useAuthStore} from '@/modules/authForm/store';
 import {AxiosError} from 'axios';
 import {useUserStore} from '@/store/useUserStore';
-import {getInputError} from '@/modules/authForm/utils/getInputError';
-import {IError} from '@/modules/authForm/models/IError';
 import {IErrorData} from '@/modules/authForm/models/IErrorData';
+import {IError} from '@/models/IError';
+import {getInputError} from '@/utils/getInputError';
+import {inputHandler} from '@/utils/inputHandler';
 
 export const AuthForm: FC = () => {
     const location = useLocation()
@@ -43,12 +44,7 @@ export const AuthForm: FC = () => {
         setErr();
     }, [location.pathname]);
 
-    const newUserHandler = (value: string, field: string) => {
-        if (errors) {
-            setErrors(errors.filter(error => error.path !== field));
-        }
-        setNewUser({...newUser, [field]: value});
-    };
+    const newUserHandler = inputHandler(errors, setErrors, newUser, setNewUser);
 
     const submit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();

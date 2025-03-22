@@ -5,9 +5,9 @@ import Loader from '@/UI/loader/Loader';
 import {useUserStore} from '@/store/useUserStore';
 import {privateRoutes, publicRoutes} from '@/pages/Pages';
 import {useRefreshStore} from '@/store/useRefreshStore';
-import {logout} from '@/utils/logout';
 import {flagNames} from '@/models';
 import {useFlagsStore} from '@/store/useFlagsStore';
+import {useLogout} from '@/hooks/useLogout';
 
 const AppRouter: FC = () => {
     const {user, setUser, removeUser} = useUserStore();
@@ -18,6 +18,7 @@ const AppRouter: FC = () => {
         refresh
     } = useRefreshStore();
     const {setFlag} = useFlagsStore();
+    const logout = useLogout();
 
     const isAuth = !!user?.id;
     const routes = isAuth ? privateRoutes : publicRoutes;

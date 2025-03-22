@@ -7,27 +7,23 @@ import Warning from '@/modules/profile/components/warning/Warning';
 import ConfirmBox from '@/modules/profile/components/confirmBox/ConfirmBox';
 import UserData from '@/modules/profile/components/userData/UserData';
 import {useFlagsStore} from '@/store/useFlagsStore';
-import {useProfileStore} from '@/modules/profile/store/useProfileStore';
-import {logout} from '@/utils/logout';
 import {flagNames} from '@/models';
+import {useLogout} from '@/hooks/useLogout';
+import {useDeleteUser} from '@/modules/profile/hooks/useDeleteUser';
 
 export const Profile: FC = () => {
     const {user, removeUser} = useUserStore();
-    const {deleteUser} = useProfileStore();
+    const deleteUser = useDeleteUser();
     const {setFlag} = useFlagsStore();
 
     const [warningFlag, setWarningFlag] = useState(!!user.isActivated);
     const [deleteAccountFlag, setDeleteAccountFlag] = useState(false);
     const [logoutFlag, setLogoutFlag] = useState(false);
 
-    const deleteAccount = () => {
-        deleteUser(user?.id);
-        removeUser();
-    };
+    const logout = useLogout();
 
-    const signOut = () => {
-        logout();
-        removeUser();
+    const deleteAccount = async () => {
+        await deleteUser(user?.id);
     };
 
     return (
@@ -52,7 +48,7 @@ export const Profile: FC = () => {
                 <ConfirmBox
                     text='Are you sure you want to logout?'
                     buttonText='Logout'
-                    function={signOut}
+                    function={logout}
                     status='warning'
                 />
             </Modal>

@@ -3,6 +3,7 @@ import styles from './Input.module.css';
 import {UISize} from '@/models';
 import EyeIcon from '@/assets/svg/passwordIcons/eyeIcon.svg';
 import ClosedEyeIcon from '@/assets/svg/passwordIcons/closedEyeIcon.svg';
+import SearchIcon from '@/assets/svg/search.svg';
 
 interface IInputProps {
     value?: string;
@@ -16,6 +17,7 @@ interface IInputProps {
     isInvalid?: boolean;
     error?: string;
     id?: string;
+    search?: () => void;
 }
 
 const Input: FC<IInputProps> = props => {

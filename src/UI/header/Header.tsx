@@ -1,4 +1,4 @@
-import React, {FC, useEffect, useState} from 'react';
+import React, {FC, useState} from 'react';
 import styles from './Header.module.css';
 import {Pages} from '@/pages/Pages';
 import logo from '@/assets/images/logo.png';
@@ -38,7 +38,11 @@ const Header: FC = () => {
                 to={Pages.PROFILE}
                 className={styles.AvatarLink}
             >
-                <Avatar className={styles.Avatar}/>
+                {flags.mobile ?
+                    <Avatar/>
+                    :
+                    <Avatar size={55}/>
+                }
             </Link>
         </header>
     );
